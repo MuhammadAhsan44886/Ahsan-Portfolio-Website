@@ -8,7 +8,8 @@ const App = () => {
       <div className="container mx-auto">
         <Navbar />
       </div>
-      <div className="container mx-auto mt-[120px] px-[16px]">
+
+      <div className="mt-[120px] px-[50px] container mx-auto">
         <AboutMe />
       </div>
     </>

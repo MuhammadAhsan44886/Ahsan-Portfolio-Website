@@ -38,16 +38,16 @@ const Navbar = () => {
   ];
   return (
     <>
-      {width > 700 ? (
+      {width > 640 ? (
         <>
           {/* Desktop View Navbar--- */}
-          <nav className="w-full flex justify-start items-center px-8 h-[80px] bg-[#FFFAFA] fixed top-0">
+          <nav className="w-full flex justify-start items-center px-8 h-[80px] bg-[#FFFAFA] fixed top-0 overflow-hidden">
             <img
               src={logo}
               alt="programmingwithahsan_icon"
               className="w-[140px] h-[140px] object-contain mr-10"
             />
-            <ul className="flex space-x-8 font-Poppins text-[#282828] text-[14px] font-normal">
+            <ul className="flex space-x-6 font-Poppins text-[#282828] font-normal text-[14px] max-md:text-[12px]">
               {navLinks.map((item, index) => (
                 <button
                   key={index}
@@ -64,7 +64,7 @@ const Navbar = () => {
         <>
           {/* Mobile View Navbar Open--- */}
           <nav
-            className={`transition-all ease-out duration-700 w-full bg-[#FFFAFA] fixed top-0 left-0 h-full ${
+            className={`transition-all ease-out duration-700 w-full z-10 overflow-hidden bg-[#FFFAFA] fixed top-0 left-0 h-full ${
               isOpen ? "" : "opacity-0 invisible"
             }`}
           >
@@ -96,7 +96,7 @@ const Navbar = () => {
 
           {/* Mobile View Navbar Close--- */}
           <div
-            className={`transition-all ease-out duration-700 w-full flex justify-between items-center px-2 pr-4 mt-[-20px] fixed top-0 bg-[#FFFAFA] ${
+            className={`transition-all ease-out duration-700 w-full flex justify-between items-center px-2 pr-4 fixed top-0 bg-[#FFFAFA] h-[100px] overflow-hidden ${
               isOpen ? "opacity-0 invisible" : ""
             }`}
             onClick={() => setIsOpen(true)}
